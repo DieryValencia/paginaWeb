@@ -1,11 +1,9 @@
-/* ===============================
-   RESET PROFESIONAL
-================================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased; /* Suaviza fuentes en Mac/Chrome */
+    -webkit-font-smoothing: antialiased;
+    /* Suaviza fuentes en Mac/Chrome */
 }
 
 /* ===============================
@@ -25,6 +23,16 @@ body {
    TÍTULO (Look de Editorial)
 ================================= */
 h1 {
+
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    /* Tamaño fluido que se adapta solo */
+    color: #2c3e50;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
     font-size: clamp(2.2rem, 6vw, 4rem);
     color: #1a1a1a;
     margin-bottom: 60px;
@@ -35,7 +43,8 @@ h1 {
     background: linear-gradient(to right, #2c3e50, #4ca1af);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+
 }
 
 /* ===============================
@@ -45,16 +54,59 @@ h1 {
 /* Si están sueltos, el margen automático de abajo hará el trabajo */
 
 h4 {
+
+    font-size: 1.1rem;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #444;
+    background: white;
+    /* Les da un look de "tarjeta" */
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* ===============================
+   SEPARADOR
+================================= */
+hr {
+    margin: 50px auto;
+    width: 40%;
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.2), transparent);
+}
+
+/* ===============================
+   IMÁGENES
+================================= */
+img {
+    display: block;
+    width: 100%;
+    /* El ancho lo controlará el contenedor */
+    max-width: 350px;
+    aspect-ratio: 1 / 1;
+    /* Hace que todas sean cuadradas y uniformes */
+    object-fit: cover;
+    /* Recorta la imagen para que llene el cuadrado sin deformarse */
+    border-radius: 16px;
+    border: 5px solid white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Animación más "elástica" */
     font-size: 1.2rem;
-    margin: 0 auto 50px auto; /* Centrado automático y espacio abajo */
+    margin: 0 auto 50px auto;
+    /* Centrado automático y espacio abajo */
     font-weight: 700;
     color: #2d3436;
     background: rgba(255, 255, 255, 0.9);
-    display: table; /* Se ajusta al ancho del texto perfectamente */
+    display: table;
+    /* Se ajusta al ancho del texto perfectamente */
     padding: 10px 30px;
     border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     text-transform: capitalize;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -64,18 +116,19 @@ h4 {
 ================================= */
 img {
     display: block;
-    margin: 0 auto 20px auto; /* Centrado automático */
+    margin: 0 auto 20px auto;
+    /* Centrado automático */
     width: 100%;
-    max-width: 380px; 
+    max-width: 380px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 24px;
     border: 8px solid white;
     /* Sombra multi-capa para realismo */
-    box-shadow: 
-        0 10px 20px rgba(0,0,0,0.1),
-        0 6px 6px rgba(0,0,0,0.1),
-        0 0 100px -10px rgba(0,0,0,0.05);
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.1),
+        0 6px 6px rgba(0, 0, 0, 0.1),
+        0 0 100px -10px rgba(0, 0, 0, 0.05);
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
 }
@@ -83,7 +136,7 @@ img {
 /* Efecto de interacción */
 img:hover {
     transform: translateY(-15px) rotate(1deg);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
 }
 
 /* ===============================
@@ -96,7 +149,9 @@ img:hover {
     outline: 2px solid rgba(255, 215, 0, 0.3);
     outline-offset: 10px;
 }
-.Leon + h4 { /* Si el h4 viene después de la clase Leon */
+
+.Leon+h4 {
+    /* Si el h4 viene después de la clase Leon */
     color: #b8860b;
     border-bottom: 3px solid #FFD700;
 }
@@ -107,7 +162,8 @@ img:hover {
     outline: 2px solid rgba(158, 184, 214, 0.3);
     outline-offset: 10px;
 }
-.Elefante + h4 {
+
+.Elefante+h4 {
     color: #4a69bd;
     border-bottom: 3px solid #9eb8d6;
 }
@@ -125,18 +181,49 @@ img:not(.Leon):not(.Elefante) {
         padding: 40px 15px;
     }
 
-    h1 {
-        letter-spacing: 3px;
-        margin-bottom: 40px;
+
+    .gallery {
+        gap: 20px;
+
+        h1 {
+            letter-spacing: 3px;
+            margin-bottom: 40px;
+
+        }
+
+        img {
+            max-width: 85%;
+            border-width: 6px;
+        }
+
+        h4 {
+            font-size: 1rem;
+            padding: 8px 20px;
+        }
     }
 
-    img {
-        max-width: 85%;
-        border-width: 6px;
+    footer {
+        /* Línea superior sutil */
+        border-top: 1px solid #e0e0e0;
+
+        /* Espaciado y alineación */
+        padding: 20px 0;
+        margin-top: 40px;
+        text-align: center;
+
+        /* Tipografía */
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 0.9rem;
+        color: #555;
+        /* Gris oscuro profesional */
+        line-height: 1.6;
     }
-    
-    h4 {
-        font-size: 1rem;
-        padding: 8px 20px;
+
+    /* Opcional: Dale un toque de énfasis a la Universidad */
+    footer br+b,
+    footer {
+        letter-spacing: 0.5px;
     }
+
+
 }
