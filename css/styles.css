@@ -26,13 +26,14 @@ body {
    TÍTULO PRINCIPAL
 ================================= */
 h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem); /* Tamaño fluido que se adapta solo */
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    /* Tamaño fluido que se adapta solo */
     color: #2c3e50;
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-weight: 800;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* ===============================
@@ -56,11 +57,12 @@ h4 {
     margin-top: 10px;
     font-weight: 600;
     color: #444;
-    background: white; /* Les da un look de "tarjeta" */
+    background: white;
+    /* Les da un look de "tarjeta" */
     display: inline-block;
     padding: 5px 15px;
     border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 /* ===============================
@@ -71,7 +73,7 @@ hr {
     width: 40%;
     border: 0;
     height: 2px;
-    background: linear-gradient(to right, transparent, rgba(0,0,0,0.2), transparent);
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.2), transparent);
 }
 
 /* ===============================
@@ -79,14 +81,18 @@ hr {
 ================================= */
 img {
     display: block;
-    width: 100%; /* El ancho lo controlará el contenedor */
-    max-width: 350px; 
-    aspect-ratio: 1 / 1; /* Hace que todas sean cuadradas y uniformes */
-    object-fit: cover; /* Recorta la imagen para que llene el cuadrado sin deformarse */
+    width: 100%;
+    /* El ancho lo controlará el contenedor */
+    max-width: 350px;
+    aspect-ratio: 1 / 1;
+    /* Hace que todas sean cuadradas y uniformes */
+    object-fit: cover;
+    /* Recorta la imagen para que llene el cuadrado sin deformarse */
     border-radius: 16px;
     border: 5px solid white;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animación más "elástica" */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Animación más "elástica" */
     cursor: pointer;
 }
 
@@ -103,7 +109,7 @@ img:hover {
     body {
         padding: 30px 10px;
     }
-    
+
     .gallery {
         gap: 20px;
     }
